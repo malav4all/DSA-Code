@@ -359,10 +359,56 @@ void print19(int num)
         cout << endl;
     };
 }
+
+void print20(int num)
+{
+    int spaces = 2 * num - 2;
+    for (int i = 1; i <= 2 * num - 1; i++)
+    {
+        int star = i;
+        if (i > num)
+            star = 2 * num - i;
+        for (int j = 1; j <= star; j++)
+        {
+            cout << "*";
+        }
+
+        for (int j = 1; j <= spaces; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= star; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+        if (i < num)
+            spaces -= 2;
+        else
+            spaces += 2;
+    }
+}
+
+void print21(int num)
+{
+    for (int i = 0; i < num; i++)
+    {
+        for (int j = 0; j < num; j++)
+        {
+            if (i == 0 || j == 0 || i == num - 1 || j == num - 1)
+            {
+                cout << "*";
+            }
+            else
+                cout << " ";
+        }
+        cout << endl;
+    }
+}
 int main()
 {
     int num1;
     cin >> num1;
-    print19(num1);
+    print21(num1);
     return 0;
 }
