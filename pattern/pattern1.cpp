@@ -405,10 +405,46 @@ void print21(int num)
         cout << endl;
     }
 }
+
+void print22(int num)
+{
+
+    for (int i = 0; i < num; i++)
+    {
+
+        for (int j = 1; j < num - i; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+void print23(int num)
+{
+
+    for (int i = 0; i < num; i++)
+    {
+
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+        for (int j = num; j > i; j--)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
 int main()
 {
     int num1;
     cin >> num1;
-    print21(num1);
+    print23(num1);
     return 0;
 }
